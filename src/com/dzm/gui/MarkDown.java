@@ -11,6 +11,8 @@ import javafx.stage.Stage;
  */
 public class MarkDown extends Application{
 	
+	private Stage mainStage;
+	
     public static void main(String[] args) {
         launch(args);
     }
@@ -25,10 +27,19 @@ public class MarkDown extends Application{
             primaryStage.setTitle("JavaMarkDown");
             primaryStage.setScene(new Scene(root));
             primaryStage.show();
+            setMainStage(primaryStage);
 
         } catch(Exception e) {
             e.printStackTrace();
         }
 	}
-	
+
+	public Stage getMainStage() {
+		return mainStage;
+	}
+
+	public void setMainStage(Stage mainStage) {
+		this.mainStage = mainStage;
+	}
+		
 }
